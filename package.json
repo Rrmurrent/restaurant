@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Rrmurrent/restaurant/issues"
   },
-  "homepage": "https://github.com/Rrmurrent/restaurant#readme"
+  "homepage": "https://github.com/Rrmurrent/restaurant#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
 }
