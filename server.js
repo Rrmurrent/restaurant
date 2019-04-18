@@ -33,7 +33,7 @@ waitlist = [];
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "restaurant.html"));
+  res.sendFile(path.join(__dirname, "public", "restaurant.html"));
 });
 
 app.get("/add", function(req, res) {
