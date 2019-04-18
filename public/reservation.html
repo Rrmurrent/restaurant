@@ -104,10 +104,12 @@
       function(data) {
 
         // If a table is available... tell user they have booked.
-        if (data) {
+        if (data.server) {
           alert("Welcome! You are about to experience tastiness beyond your wildest dreams " + data.server + " will be your humble server");
         }
-
+        else if (data) {
+          alert(data);
+        }
         // If a table isn't available... tell user they on the waiting list.
         else {
           alert("Sorry, you shouldn't have waited so long to make a reservation. Have fun on the waiting list. Don't starve. :(");

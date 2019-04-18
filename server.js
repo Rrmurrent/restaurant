@@ -41,6 +41,10 @@ app.get("/add", function(req, res) {
   res.sendFile(path.join(__dirname, "add.html"));
 });
 
+app.get("/tables", function(req, res) {
+  res.send("get out of here, you stalker.");
+});
+
 // displays the reservations
 app.get("/api/reservations", function(req, res) {
   return res.json(reservations);
@@ -64,10 +68,13 @@ app.post("/api/reservations", function(req, res) {
 
     console.log(newRes);
   
-    if(reservations.length < 5) reservations.push(newRes);
-    else waitlist.push(newRes);
-  
-    res.json(newRes);
+    if(reservations.length < 5) {
+      reservations.push(newRes);
+      res.json(newRes);
+    } 
+    else {
+      waitlist.push(newRes);
+    }
   }
   else {
     res.send("reservation failed. please provide all required fields.");
