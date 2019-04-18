@@ -22,6 +22,7 @@ class Table {
     this.number = number;
     this.email = email;
     this.id = id;
+    this.server = ["Magee", "McGraw", "McGuberson"][Math.floor(Math.random() * 3)];
   }
 }
 

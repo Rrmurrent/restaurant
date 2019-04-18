@@ -91,16 +91,16 @@
 
     // Here we grab the form elements
     var newReservation = {
-      customerName: $("#reserve-name").val().trim(),
-      phoneNumber: $("#reserve-phone").val().trim(),
-      customerEmail: $("#reserve-email").val().trim(),
-      customerID: $("#reserve-unique-id").val().trim()
+      name: $("#reserve-name").val().trim(),
+      number: $("#reserve-phone").val().trim(),
+      email: $("#reserve-email").val().trim(),
+      id: $("#reserve-unique-id").val().trim()
     };
 
     console.log(newReservation);
 
 
-    $.post("/api/tables", newReservation,
+    $.post("/api/reservations", newReservation,
       function(data) {
 
         // If a table is available... tell user they have booked.
